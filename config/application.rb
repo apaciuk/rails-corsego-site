@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module CorsegoSite
+module Corsego
   class Application < Rails::Application
     config.active_job.queue_adapter = :sidekiq
     config.application_name = Rails.application.class.module_parent_name
@@ -19,6 +19,6 @@ module CorsegoSite
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.eager_load_paths << Rails.root.join("extras")
   end
 end
