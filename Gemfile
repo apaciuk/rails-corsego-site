@@ -77,6 +77,7 @@ gem "devise", "~> 4.8", ">= 4.8.0"
 gem "friendly_id", "~> 5.4"
 gem "jsbundling-rails"
 gem "madmin"
+gem 'simple_form', '~> 5.1'
 gem "name_of_person", "~> 1.1"
 gem "noticed", "~> 1.4"
 gem "omniauth-facebook", "~> 8.0"
