@@ -7,7 +7,7 @@
 #  title       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  user_id     :bigint           not null
+#  user_id     :bigint
 #
 # Indexes
 #
@@ -18,5 +18,11 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Course < ApplicationRecord
-  belongs_to :user
+  validates :title, presence: true 
+  validates :description, presence: true, length: { minimum: 5 }
+  belongs_to :user, optional: true
+
+  def to_s 
+    title
+  end
 end
